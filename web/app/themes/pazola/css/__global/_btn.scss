@@ -1,0 +1,28 @@
+.btn {
+    padding: .5rem 1rem;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-dark;
+
+    border: 2px solid $color-1;
+    cursor: pointer;
+
+    transition: .2s background-color;
+
+    &--primary {
+        background: $color-1;
+
+        transition: .2s background-color;
+
+        &:hover {
+            background: $color-light;
+        }
+    }
+
+    &--secondary {
+        &:hover {
+            background: $color-1;
+        }
+    }
+}

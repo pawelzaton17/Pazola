@@ -1,0 +1,186 @@
+@import '__settings/init';
+
+.block-contact {
+    &__wrapper.container {
+        max-width: 68.75rem;
+
+        @include media('>=lg') {
+            margin: 145px auto;
+        }
+    }
+
+    &__main-content {
+        margin-bottom: 4rem;
+
+        @include media('>=lg') {
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: 15px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+        margin-top: 1.87rem;
+
+        @include media('>=md') {
+            display: block;
+
+            margin-top: 6.25rem;
+        }
+    }
+
+    &__row--contact {
+        @include media('>=lg') {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__cols-wrapper {
+        @include media('>=lg') {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__cols-item {
+        margin-bottom: 3.1rem;
+
+        p {
+            margin: 0;
+
+            font-size: 15px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        a {
+            font-weight: bold;
+            color: $color-dark;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    &__map {
+        max-width: 65.625rem;
+
+        margin: 0;
+
+        @include media('>=md') {
+            margin: 0 auto;
+        }
+        @include media('>=lg') {
+            padding-right: 2.8rem;
+        }
+    }
+
+    &__map-text {
+        padding-left: 1.8rem;
+
+        color: white;
+    }
+
+    &__map-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        height: 20%;
+
+        position: absolute;
+
+        background-color: $color-dark;
+
+        @include media('>=lg') {
+            width: 35%;
+            height: 6.875rem;
+
+            bottom: -2.8125rem;
+            margin-left: .625rem;
+        }
+
+        p {
+            margin: 0;
+
+            font-size: 15px;
+            line-height: 1.6rem;
+        }
+    }
+
+    .btn {
+        display: flex;
+        align-items: center;
+
+        height: 3.4rem;
+
+        margin-right: 1.8rem;
+    }
+
+    .nf-form-cont {
+        @include media('>=md') {
+            max-width: 27.5rem;
+
+            margin: 0 auto;
+        }
+
+        .nf-field-container {
+            margin-bottom: 15px;
+        }
+
+        .nf-before-form-content,
+        .nf-field-label {
+            display: none;
+        }
+
+        .nf-error-msg {
+            font-size: .875rem;
+        }
+
+        .nf-field-element {
+            &:after {
+                display: none;
+            }
+        }
+
+        input,
+        textarea {
+            background: $color-light;
+        }
+
+        input {
+            height: 3.5rem;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .submit-wrap {
+            input {
+                color: $color-dark;
+
+                border: 2px solid $color-1;
+                background: $color-1;
+                cursor: pointer;
+
+                &:hover {
+                    background: $color-light;
+                }
+            }
+        }
+    }
+}

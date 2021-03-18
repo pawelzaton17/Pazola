@@ -1,0 +1,116 @@
+//
+// ----------------------------------------
+// GENERAL
+//
+// The most general styles for
+// <html>, <body> and .container
+//
+// Set font and clear body padding
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* Sets up the Base 10 stuff */
+
+    //@include media('>=max') {
+    //    font-size: 68%;
+    //}
+}
+
+html,
+button,
+a,
+input,
+select,
+textarea {
+    font-family: $font-base;
+}
+
+body {
+    margin: 0;
+
+    font-weight: $font-weight-base;
+    color: $text-color-base;
+
+    background: $body-background-color;
+
+    @include font($font-size-base, $line-height-base);
+    -webkit-font-smoothing: antialiased;
+    -ms-scroll-limit-x-max: 100%;
+    -ms-scroll-limit-x-min: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+// Make all images responsive
+img {
+    height: auto;
+    max-width: 100%;
+
+    vertical-align: middle;
+}
+
+/* Set custom outline styles */
+a,
+button,
+input,
+select,
+textarea {
+    &:focus {
+        outline: none;
+
+        html.user-tab-nav & {
+            outline: $outline;
+            outline-offset: 0;
+        }
+    }
+}
+
+.navigation.pagination {
+    clear: both;
+}
+
+// WP navigation menus are lists, but they don't need default list styling
+nav {
+    ul {
+        padding: 0;
+
+        margin: 0;
+
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+    }
+}
+
+// Stop css animation of the specific elements during resizing
+.resize-animation-stopper {
+    .main-header * {
+        transition: none !important;
+    }
+}
+
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    width: 1px;
+    height: 1px;
+    padding: 0;
+
+    position: absolute;
+    margin: -1px;
+
+    word-wrap: normal !important;
+
+    border: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    clip-path: inset(50%);
+}

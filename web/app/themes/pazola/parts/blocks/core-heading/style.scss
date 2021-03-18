@@ -1,0 +1,42 @@
+@import '__settings/init';
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 1.2em;
+
+	font-family: $font-base;
+	font-weight: $font-weight-bold;
+	color: $text-color-base;
+	&:only-child {
+		margin: 0;
+	}
+}
+
+h1 {
+	@include font(40, 48);
+}
+
+h2 {
+	@include font(35, 42);
+}
+
+h3 {
+	@include font( 31, 37.5);
+}
+
+h4 {
+	@include font(25,30);
+}
+
+h5 {
+	@include font(20, 24);
+}
+
+h6 {
+	@include font(16, 19.2);
+}

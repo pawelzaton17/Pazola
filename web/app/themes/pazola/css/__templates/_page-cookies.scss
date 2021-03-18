@@ -1,0 +1,62 @@
+.page-template-cookies {
+    position: relative;
+    margin: 2.5rem 0;
+
+    @include media('>=md') {
+        margin: 6.25rem 0 4rem;
+    }
+
+    &:after {
+        width: 330px;
+        height: 200px;
+
+        position: absolute;
+        z-index: -1;
+        top: -10px;
+        right: 0;
+        left: -290px;
+        margin: auto;
+
+        @include media('>=lg') {
+            content: url("../images/svg/after-large.svg");
+        }
+    }
+
+    .container {
+        max-width: 860px;
+
+        margin: 0 auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0 0 15px;
+
+        font-size: 1.5rem;
+
+        @include media('>=lg') {
+            margin-bottom: 30px;
+
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        margin: 0;
+
+        font-size: 1rem;
+        line-height: 1.85rem;
+
+        @include media('>=lg') {
+            font-size: 1.125rem;
+            line-height: 2rem;
+        }
+        &:not(:last-of-type) {
+            margin: 0 0 15px;
+        }
+    }
+}

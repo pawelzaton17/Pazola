@@ -1,0 +1,63 @@
+.main-header {
+    &__socials {
+        display: none;
+
+        @include reset-list();
+        @include media('>=lg') {
+            display: flex;
+        }
+    }
+
+    &__socials-item {
+        display: flex;
+        align-items: center;
+        &:not(:last-of-type) {
+            margin-right: .875rem;
+        }
+    }
+
+    &__socials-figure {
+        height: 1.875rem;
+
+        background: $color-dark;
+
+        @include media('>=xxl') {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__socials-caption {
+        display: none;
+        align-items: center;
+
+        height: 1.875rem;
+        padding: 0 1.375rem;
+
+        font-size: 1rem;
+        font-weight: 700;
+
+        background: $color-1;
+
+        @include media('>=xxl') {
+            display: flex;
+        }
+        @include media('>=xxxl') {
+            font-size: 1.125rem;
+        }
+
+        & > * {
+            margin: 0;
+        }
+    }
+
+    &__socials-link {
+        transition: .2s filter;
+
+        @include reset-link($color-light);
+
+        &:hover {
+            filter: grayscale(.2);
+        }
+    }
+}

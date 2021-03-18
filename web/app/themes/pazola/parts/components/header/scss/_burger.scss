@@ -1,0 +1,51 @@
+.main-header {
+    &__burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        z-index: 10;
+        margin-left: auto;
+
+        @include media('>=lg') {
+            display: none;
+        }
+
+        span {
+            display: flex;
+
+            width: 1.875rem;
+            height: 3px;
+
+            position: relative;
+
+            background: $color-dark;
+
+            transition: .2s transform;
+
+            .inverted-colors & {
+                filter: invert(1);
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: .625rem;
+            }
+        }
+
+        &.is-active {
+            span {
+                &:first-of-type {
+                    top: .875rem;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-of-type {
+                    bottom: .775rem;
+                    transform: rotate(135deg);
+                }
+            }
+        }
+    }
+}

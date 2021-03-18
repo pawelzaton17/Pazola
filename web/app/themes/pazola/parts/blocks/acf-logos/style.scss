@@ -1,0 +1,46 @@
+@import '__settings/init';
+
+.block-logos {
+    margin: 6rem 0;
+
+    @include media('>=lg') {
+        margin: 6rem 0 8rem;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include media('>=md') {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        @include media('>=lg') {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding-top: 4rem;
+
+        @include media('>=md') {
+            width: 30%;
+        }
+        @include media('>=lg') {
+            width: 25%;
+        }
+
+        &:first-child {
+            padding-top: 0;
+
+            @include media('>=md') {
+                padding-top: 4rem;
+            }
+        }
+    }
+}

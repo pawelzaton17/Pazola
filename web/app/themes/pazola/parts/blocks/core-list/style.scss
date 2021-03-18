@@ -1,0 +1,9 @@
+@import '__settings/init';
+
+// Ul and Ol styles
+.page-content ul:not([class]),
+.acf-block ul:not([class]),
+.editor-rich-text ul,
+ol {
+	margin: 0 0 rem(27);
+}

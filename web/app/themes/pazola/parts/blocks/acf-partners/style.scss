@@ -1,0 +1,52 @@
+@import '__settings/init';
+
+.block-partners {
+    margin: 4rem 0 6rem;
+
+    @include media('>=lg') {
+        margin: 6rem 0 10rem;
+    }
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__list {
+        max-width: 950px;
+
+        margin: 2rem;
+
+        @include reset-list;
+        @include media('>=md') {
+            padding: 0 4rem;
+
+            margin: 2.5rem auto;
+        }
+        @include media('>=lg') {
+            margin: 4rem auto;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .slick-arrow {
+        &.slick-prev,
+        &.slick-next {
+            top: 0;
+            bottom: 0;
+            transform: translate(0);
+            margin: auto;
+        }
+
+        &.slick-next {
+            transform: translate(0) rotate(180deg);
+        }
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+}

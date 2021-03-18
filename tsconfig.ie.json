@@ -1,0 +1,7 @@
+{
+    "extends": "./tsconfig.unstrict.json",
+    "compilerOptions": {
+        "target": "ES5",
+        "downlevelIteration": true
+    }
+}

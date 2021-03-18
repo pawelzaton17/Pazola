@@ -1,0 +1,90 @@
+@import '__settings/init';
+
+.slick-arrow {
+	width: 2rem;
+	height: 2rem;
+
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+
+	font-size: 0;
+	line-height: 0;
+
+	border: 2px solid $color-1;
+	background-color: $color-light;
+	cursor: pointer;
+
+	transition: background-color $default-transition-speed;
+
+	@include media('>=lg') {
+		width: 3rem;
+		height: 3rem;
+	}
+	&:hover {
+		background-color: $color-1;
+		html.touch-device & {
+			background-color: $color-1;
+		}
+		&::after {
+			border-color: $color-light;
+			html.touch-device & {
+				border-color: $color-dark;
+			}
+		}
+	}
+
+	&:after {
+		content: '';
+
+		display: block;
+
+		width: .625rem;
+		height: .625rem;
+
+		position: absolute;
+		top: 50%;
+		left: 56%;
+		transform: translate(-50%, -50%) rotate(45deg);
+		margin-left: 2px;
+
+		border: 2px solid $color-dark;
+		border-width: 0 0 1px 1px;
+
+		transition: border-color $default-transition-speed;
+
+		@include media('>=lg') {
+			width: .875rem;
+			height: .875rem;
+
+			border-width: 0 0 3px 3px;
+		}
+	}
+
+	&.slick-prev {
+		top: calc( 50% - 16px);
+		right: auto;
+		left: 5px;
+		transform: translate(0, -50%);
+
+		@include media('>=lg') {
+			top: calc( 50% - 27px);
+			left: 20px;
+		}
+	}
+
+	&.slick-next {
+		top: calc(50% - 16px);
+		right: 5px;
+		left: auto;
+		transform: translate(0%, -50%) rotate(180deg);
+
+		@include media('>=lg') {
+			top: calc( 50% - 27px);
+			right: 20px;
+		}
+	}
+}
+.slick-slide:focus {
+	outline: none;
+}

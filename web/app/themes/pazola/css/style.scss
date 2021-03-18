@@ -1,0 +1,16 @@
+// Helpers
+@import '__vendors/normalize/import-now';
+
+// Settings
+@import '__settings/init';
+
+// General
+@import '__global/init';
+
+// Layout
+@import '__layout/init';
+
+// Templates
+@import '__templates/init';
+
+@import "aos.css";

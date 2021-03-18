@@ -1,0 +1,15 @@
+@import "style.scss";
+
+.block-content {
+    padding: 0 15px;
+    .wp-block {
+        max-width: 100%;
+    }
+    &:after {
+        content: '';
+        clear: both;
+
+        display: table;
+    }
+}
+

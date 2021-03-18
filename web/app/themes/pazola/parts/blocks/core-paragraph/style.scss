@@ -1,0 +1,25 @@
+@import '__settings/init';
+
+/* Text Elements */
+p {
+	margin: 0 0 rem(27);
+
+	&:last-child {
+		margin: 0;
+	}
+
+	&.is-style-uppercase {
+		text-transform: uppercase;
+	}
+
+	&.is-style-preheading {
+		color: $secondary;
+		text-transform: uppercase;
+	}
+
+	&.is-style-leadparagraph {
+		font-size: rem(18);
+		font-weight: 700;
+		line-height: rel(26,18);
+	}
+}

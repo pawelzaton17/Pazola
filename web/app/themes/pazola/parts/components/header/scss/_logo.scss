@@ -1,0 +1,11 @@
+.main-header {
+    &__logo,
+    &__logo a,
+    &__figure {
+        display: inline-flex;
+    }
+
+    &__logo {
+        position: relative;
+    }
+}

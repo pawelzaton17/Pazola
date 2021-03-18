@@ -1,0 +1,95 @@
+
+// Normalize links across browsers
+a {
+    display: inline-block;
+
+    font-weight: 400;
+    color: $link-color;
+    text-decoration: none;
+    letter-spacing: rem(.18);
+
+    transition: color $default-transition-speed;
+
+    .page-content &:not([class]),
+    .editor-rich-text & {
+        position: relative;
+    }
+
+    .page-content &:not([class]):before,
+    .editor-rich-text &:before {
+        content: '';
+
+        width: 100%;
+        height: rem(1);
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        background-color: currentColor;
+
+        transition: background-color .2s;
+    }
+
+    .page-content &:not([class]):hover:before,
+    .rich-text &:hover:before {
+        background-color: $link-hover-color;
+    }
+
+    img {
+        border: 0;
+    }
+}
+
+a:focus,
+a:hover {
+    color: $link-hover-color;
+}
+
+/* Horizontal Line */
+hr {
+    margin: rem(40) 0 rem(40);
+
+    border-top: 1px solid $text-color-base;
+}
+
+::selection {
+    color: $text-light;
+
+    background: $secondary;
+}
+::-moz-selection {
+    color: $text-light;
+
+    background: $secondary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+
+    font-size: 1.5rem;
+
+    @include media('>=lg') {
+        font-size: 2rem;
+    }
+}
+
+p {
+    margin: 0;
+
+    font-size: 1rem;
+    line-height: 1.85rem;
+
+    @include media('>=lg') {
+        font-size: 1.125rem;
+        line-height: 2rem;
+    }
+    &:not(:last-of-type) {
+        margin: 0 0 15px;
+    }
+}

@@ -1,0 +1,61 @@
+@import '__settings/init';
+@import './scss/burger';
+@import './scss/lang';
+@import './scss/logo';
+@import './scss/nav';
+@import './scss/socials';
+
+.main-header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background: gray;
+    background: $color-light;
+
+    transition: .3s top, .2s background-color, .2s box-shadow;
+
+    &.is-sticky {
+        box-shadow: 3px 3px 1.5rem rgba($color-dark, .05);
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 1.25rem 1rem;
+
+        @include media('>=lg') {
+            max-width: none;
+        }
+        @include media('>=xxl') {
+            max-width: 87.5rem;
+        }
+        @include media('>=xxxl') {
+            max-width: 104.75rem;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+
+        margin-right: 1.6rem;
+    }
+
+    &__extra {
+        display: none;
+
+        @include media('>=lg') {
+            display: flex;
+        }
+    }
+}
